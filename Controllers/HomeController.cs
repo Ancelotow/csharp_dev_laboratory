@@ -9,23 +9,10 @@ namespace DevLaboratory.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public void test()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
             ContractBO<ContractBOInformations> test = new ContractBO<ContractBOInformations>();
-            test.LoadAttributesFromDbWithUuid("");
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            return View();
+            test.LoadAttributesFromDbWithUuid("MON_UUID");
         }
     }
 }
